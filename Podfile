@@ -6,6 +6,8 @@ target 'BiteMe' do
   use_frameworks!
 
 pod 'Firebase/Firestore'
+pod 'Firebase/Storage'
+pod 'CircleProgressBar', '~> 0.32’
 
 # Optionally, include the Swift extensions if you're using Swift.
 pod 'FirebaseFirestoreSwift'

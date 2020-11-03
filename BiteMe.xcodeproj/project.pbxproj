@@ -15,12 +15,10 @@
 		DD0A3A5324E003A900F348D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD0A3A5224E003A900F348D4 /* Assets.xcassets */; };
 		DD0A3A5624E003A900F348D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD0A3A5424E003A900F348D4 /* LaunchScreen.storyboard */; };
 		DD1066922503EA6C007EF9F6 /* BeerLibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1066912503EA6C007EF9F6 /* BeerLibraryTableViewController.swift */; };
+		DD215C75253BB3C1005E44E4 /* BeerImageClassifier_1_1_03.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DD215C74253BB3C1005E44E4 /* BeerImageClassifier_1_1_03.mlmodel */; };
+		DD215C7A253BB5A5005E44E4 /* IfIsABottleModel 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DD215C79253BB5A5005E44E4 /* IfIsABottleModel 1.mlmodel */; };
 		DD834C5A24F6CDF7004DC0E6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD834C5924F6CDF7004DC0E6 /* GoogleService-Info.plist */; };
-		DDA395C924ED50FC00A7FB9B /* BeerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA395C824ED50FB00A7FB9B /* BeerData.swift */; };
 		DDA4A80B2506A076008405C1 /* TableCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA4A80A2506A076008405C1 /* TableCellTableViewCell.swift */; };
-		DDA4A80D2506A14E008405C1 /* BeerImageClassifierV6_withoutPL.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DDA4A80C2506A14E008405C1 /* BeerImageClassifierV6_withoutPL.mlmodel */; };
-		DDAE0D842517F47F0065ED9B /* BeerImageClassifier_1_1_0_2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DDAE0D832517F47F0065ED9B /* BeerImageClassifier_1_1_0_2.mlmodel */; };
-		DDECFC2724F2995900FBBFCA /* BeerImageClassifierBest.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DDECFC2624F2995900FBBFCA /* BeerImageClassifierBest.mlmodel */; };
 		DDF725F62514F39900096A08 /* DetailBeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF725F52514F39900096A08 /* DetailBeerViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,12 +35,10 @@
 		DD0A3A5524E003A900F348D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD0A3A5724E003A900F348D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD1066912503EA6C007EF9F6 /* BeerLibraryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerLibraryTableViewController.swift; sourceTree = "<group>"; };
+		DD215C74253BB3C1005E44E4 /* BeerImageClassifier_1_1_03.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BeerImageClassifier_1_1_03.mlmodel; sourceTree = "<group>"; };
+		DD215C79253BB5A5005E44E4 /* IfIsABottleModel 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "IfIsABottleModel 1.mlmodel"; sourceTree = "<group>"; };
 		DD834C5924F6CDF7004DC0E6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Target Support Files/Pods-BiteMe/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		DDA395C824ED50FB00A7FB9B /* BeerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerData.swift; sourceTree = "<group>"; };
 		DDA4A80A2506A076008405C1 /* TableCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCellTableViewCell.swift; sourceTree = "<group>"; };
-		DDA4A80C2506A14E008405C1 /* BeerImageClassifierV6_withoutPL.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BeerImageClassifierV6_withoutPL.mlmodel; sourceTree = "<group>"; };
-		DDAE0D832517F47F0065ED9B /* BeerImageClassifier_1_1_0_2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BeerImageClassifier_1_1_0_2.mlmodel; sourceTree = "<group>"; };
-		DDECFC2624F2995900FBBFCA /* BeerImageClassifierBest.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BeerImageClassifierBest.mlmodel; sourceTree = "<group>"; };
 		DDF725F52514F39900096A08 /* DetailBeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBeerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,22 +93,60 @@
 		DD0A3A4824E003A400F348D4 /* BiteMe */ = {
 			isa = PBXGroup;
 			children = (
-				DD0A3A4924E003A400F348D4 /* AppDelegate.swift */,
-				DD0A3A4B24E003A400F348D4 /* SceneDelegate.swift */,
-				DD0A3A4D24E003A400F348D4 /* ViewController.swift */,
-				DDA395C824ED50FB00A7FB9B /* BeerData.swift */,
-				DD0A3A4F24E003A400F348D4 /* Main.storyboard */,
-				DDF725F52514F39900096A08 /* DetailBeerViewController.swift */,
-				DDA4A80A2506A076008405C1 /* TableCellTableViewCell.swift */,
-				DD1066912503EA6C007EF9F6 /* BeerLibraryTableViewController.swift */,
-				DDAE0D832517F47F0065ED9B /* BeerImageClassifier_1_1_0_2.mlmodel */,
-				DDA4A80C2506A14E008405C1 /* BeerImageClassifierV6_withoutPL.mlmodel */,
-				DDECFC2624F2995900FBBFCA /* BeerImageClassifierBest.mlmodel */,
+				DDF788FD2551CD24002F7C96 /* SupportingFiles */,
+				DDF789032551CE7D002F7C96 /* View */,
+				DDF789042551CEDF002F7C96 /* Controller */,
+				DDF789002551CD38002F7C96 /* MLModels */,
 				DD0A3A5224E003A900F348D4 /* Assets.xcassets */,
-				DD0A3A5424E003A900F348D4 /* LaunchScreen.storyboard */,
 				DD0A3A5724E003A900F348D4 /* Info.plist */,
 			);
 			path = BiteMe;
+			sourceTree = "<group>";
+		};
+		DDF788FD2551CD24002F7C96 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				DD0A3A4924E003A400F348D4 /* AppDelegate.swift */,
+				DD0A3A4B24E003A400F348D4 /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		DDF789002551CD38002F7C96 /* MLModels */ = {
+			isa = PBXGroup;
+			children = (
+				DD215C74253BB3C1005E44E4 /* BeerImageClassifier_1_1_03.mlmodel */,
+				DD215C79253BB5A5005E44E4 /* IfIsABottleModel 1.mlmodel */,
+			);
+			path = MLModels;
+			sourceTree = "<group>";
+		};
+		DDF789032551CE7D002F7C96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD0A3A4F24E003A400F348D4 /* Main.storyboard */,
+				DD0A3A5424E003A900F348D4 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DDF789042551CEDF002F7C96 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD0A3A4D24E003A400F348D4 /* ViewController.swift */,
+				DDF789052551CF1A002F7C96 /* BeerCollectionTab */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DDF789052551CF1A002F7C96 /* BeerCollectionTab */ = {
+			isa = PBXGroup;
+			children = (
+				DDF725F52514F39900096A08 /* DetailBeerViewController.swift */,
+				DDA4A80A2506A076008405C1 /* TableCellTableViewCell.swift */,
+				DD1066912503EA6C007EF9F6 /* BeerLibraryTableViewController.swift */,
+			);
+			path = BeerCollectionTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,15 +265,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDA4A80D2506A14E008405C1 /* BeerImageClassifierV6_withoutPL.mlmodel in Sources */,
-				DDA395C924ED50FC00A7FB9B /* BeerData.swift in Sources */,
+				DD215C75253BB3C1005E44E4 /* BeerImageClassifier_1_1_03.mlmodel in Sources */,
+				DD215C7A253BB5A5005E44E4 /* IfIsABottleModel 1.mlmodel in Sources */,
 				DD0A3A4E24E003A400F348D4 /* ViewController.swift in Sources */,
 				DDA4A80B2506A076008405C1 /* TableCellTableViewCell.swift in Sources */,
 				DDF725F62514F39900096A08 /* DetailBeerViewController.swift in Sources */,
-				DDECFC2724F2995900FBBFCA /* BeerImageClassifierBest.mlmodel in Sources */,
 				DD0A3A4A24E003A400F348D4 /* AppDelegate.swift in Sources */,
 				DD0A3A4C24E003A400F348D4 /* SceneDelegate.swift in Sources */,
-				DDAE0D842517F47F0065ED9B /* BeerImageClassifier_1_1_0_2.mlmodel in Sources */,
 				DD1066922503EA6C007EF9F6 /* BeerLibraryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +425,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = jankrzempek.BiteMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -413,6 +446,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = jankrzempek.BiteMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

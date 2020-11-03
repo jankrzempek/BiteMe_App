@@ -10,14 +10,22 @@ import UIKit
 
 class TableCellTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var CellsImage: UIImageView!
+    
+    @IBOutlet weak var CellsNameLabel: UILabel!
+    @IBOutlet weak var CellsAlcoLabel: UILabel!
+    @IBOutlet weak var CellsBackBottleLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
+    
+
 
 }
