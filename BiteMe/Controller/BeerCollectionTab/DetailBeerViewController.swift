@@ -42,11 +42,5 @@ class DetailBeerViewController: UIViewController {
         BeerIBULabel.text = "\(BeerIBU)"
         BeerBackLabel.text = "\(BeerBack)"
         WGALabel.text = "\(WGALabelData)"
-        
-       
-       
     }
-    
-
-
 }

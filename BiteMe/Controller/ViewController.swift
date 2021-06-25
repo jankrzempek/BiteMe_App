@@ -16,17 +16,15 @@ import FirebaseFirestore
 import CircleProgressBar
 import FirebaseStorage
 
-
-
 class ViewController: UIViewController, UINavigationControllerDelegate {
-    
     
     @IBOutlet weak var WGASquare: UIView!
     @IBOutlet weak var IsBackSquare: UIView!
     @IBOutlet weak var IBUSquare: UIView!
     @IBOutlet weak var AlcoholSquare: UIView!
     
-    @IBOutlet weak var CameraButton: UIButton!
+    @IBOutlet weak var libraryButton: UIButton!
+    @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var ConfidenceLabel: UILabel!
     @IBOutlet weak var NameLabelData: UILabel!
     @IBOutlet weak var BlessYouLabel: UILabel!
@@ -37,14 +35,17 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var WGALabel: UILabel!
     @IBOutlet weak var IsBackLabel: UILabel!
     
+    
+    @IBOutlet weak var helpImproveButton: UIButton!
+    
     let settings = FirestoreSettings()
     let db = Firestore.firestore()
+    let storage = Storage.storage().reference()
     
     var countBreaks = 0
     let imagePicker = UIImagePickerController()
     var array : [String] = []
     var TestString : String = ""
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,7 +69,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         IsBackSquare.layer.cornerRadius = 18
         
         imageView.layer.borderWidth = 4
-        //        imageView.layer.borderColor = UIColor.lightGray.cgColor
         imageView.clipsToBounds = true
         
         AlcoholSquare.layer.borderWidth = 3
@@ -91,20 +91,32 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
         BlessYouLabel.layer.borderColor = UIColor.orange.cgColor
         BlessYouLabel.clipsToBounds = true
         
-        
-        
         imagePicker.delegate = self
-        imagePicker.sourceType = .photoLibrary
         imagePicker.allowsEditing = false
-        
         
         Firestore.firestore().settings = settings
     }
     
     @IBAction func CameraButtonTapped(_ sender: UIButton) {
+        imagePicker.sourceType = .camera
         present(imagePicker, animated: true, completion: nil)
     }
-    
+    @IBAction func libraryButtonTapped(_ sender: Any) {
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
+    @IBAction func helpImproveAction(_ sender: Any) {
+        print(NameLabelData.text ?? "None")
+        let identifier = UUID()
+        if let imageData = imageView.image?.pngData() {
+            storage.child("ImproveBeers/\(identifier.uuidString).png").putData(imageData, metadata: nil) { _, error in
+                guard error == nil else {
+                    print("error")
+                    return
+                }
+            }
+        }
+    }
 }
 
 extension ViewController : UIImagePickerControllerDelegate {
@@ -163,16 +175,13 @@ private extension ViewController{
                             self.array.append(String(self.TestString))
                             self.TestString = ""
                         }
-                        
                     }
                     if char == ")" {
                         if self.TestString != "" {
                             self.array.append(String(self.TestString))
                             self.TestString = ""
                         }
-                        
                     }
-                    
                 }
                 if self.array.count == 5 {
                     //uploading real photo
@@ -219,7 +228,7 @@ private extension ViewController{
             
             if let firstResult = results.first{
                 let nameL = firstResult.identifier
-                self.BlessYouLabel.text = "Anaizuję!"
+                self.BlessYouLabel.text = "Analizuję!"
                 self.getCollection(name: nameL)
             }
         }
